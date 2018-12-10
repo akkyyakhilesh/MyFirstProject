@@ -17,12 +17,12 @@
     <form id="form1" runat="server" class="container-fluid">
          
             <div class="header  row">
-                <div class="col-lg-2" style="text-align:left">
+                <div class="col-lg-2 col-sm-6 col-md-6" style="text-align:left">
                     <span id="headerSpan" style="font-size:45px;font-family:fantasy;color:cornflowerblue;padding-left:10px">Akhilesh</span><br />
                     <span style="font-size:20px;color:darkred;font-family:fantasy;padding-left:10px">Software Developer</span>
                 </div>
                 <div class="col-lg-9"><span></span></div>
-                <div class="col-lg-1" style="float:right">
+                <div class="col-lg-1 col-sm-6 col-md-6" style="float:right">
                     <a href="https://www.talentquest.com/"><asp:Image ID="Image1" src="image/tq.png" runat="server" Height="100px"/></a>                 
                 </div>
            </div>
@@ -34,11 +34,11 @@
                     <DynamicSelectedStyle BackColor="#507CD1" />
                     <Items>
                         <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home"></asp:MenuItem>
-                        <asp:MenuItem Text="Gallery" Value="Gallery" NavigateUrl="~/user.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/user.aspx" Text="Gallery" Value="Gallery"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/blog.aspx" Text="Blog" Value="Blog"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="AboutUs"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/assignment.aspx" Text="Assignment" Value="Assignment"></asp:MenuItem>
-                        <asp:MenuItem Text="User" Value="Login" NavigateUrl="~/user.aspx">
+                        <asp:MenuItem NavigateUrl="~/user.aspx" Text="User" Value="Login">
                             <asp:MenuItem NavigateUrl="~/signUp.aspx" Text="Sign Up" Value="Sign Up"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/login.aspx" Text="Login" Value="Login"></asp:MenuItem>
                         </asp:MenuItem>

@@ -15,7 +15,7 @@
        <div class="col-lg-5" style="margin-top:15px;font-size:18px">
            <table style="border-collapse:separate;    border-spacing: 0 0.8em;">
                <tr>
-                   <th colspan="3" style="background-color:dodgerblue;color:white;padding:5px">
+                   <th colspan="2" style="background-color:dodgerblue;color:white;padding:5px;text-align:center">
                        <asp:Label ID="lblTableHead" runat="server" Text="Sign Up"></asp:Label>
                    </th>
                </tr>

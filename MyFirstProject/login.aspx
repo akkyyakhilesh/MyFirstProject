@@ -13,6 +13,10 @@
        <div class="col-lg-4"></div>
         <div class="col-lg-4">
            <table style="border-collapse:separate; width:90%;font-size:18px; border-spacing: 0 1em;">
+              <tr>
+                  <td colspan="2"> <asp:Label ID="lblError" runat="server" ForeColor="Red" Font-Size="Large"></asp:Label></td>
+              </tr>
+               
                <tr>
                    <th colspan="2" style="background-color:dodgerblue;color:white;padding:5px">
                        <asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label>
@@ -48,7 +52,7 @@
                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancelClick"/>
                    </td>
                </tr>
-               <asp:Label ID="lblError" runat="server" ForeColor="Red" Font-Size="Large"></asp:Label>
+              
            </table>
         </div>
         <div class="col-lg-4"></div>

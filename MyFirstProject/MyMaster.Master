@@ -19,12 +19,12 @@
     <form id="form1" runat="server" class="container-fluid">
          
             <div class="header  row">
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-sm-2 col-md-2">
                     <span id="headerSpan" style="font-size:45px;font-family:fantasy;color:cornflowerblue;padding-left:10px">Akhilesh</span><br />
                     <span style="font-size:20px;color:darkred;font-family:fantasy;padding-left:10px">Software Developer</span>
                 </div>
-                <div class="col-lg-8"></div>
-                <div class="col-lg-2">
+                <div class="col-lg-8 col-sm-8 col-md-8"></div>
+                <div class="col-lg-2 col-sm-2 col-md-2">
                     <a href="https://www.talentquest.com/"><asp:Image ID="Image1" src="image/tq.png" runat="server" Height="100px" Style="float:right" /></a>                 
                 </div>
            </div>
@@ -71,12 +71,12 @@
         </div>
  
         <div class="row panel-footer">
-            <div class="footerDiv col-lg-6">
+            <div class="footerDiv col-lg-6 col-md-6 col-sm-6 ">
                 <span class="footerSpan">Design and developed by Akhilesh Kumar</span><br />
                 <span class="footerSpan">All Right Reserved</span>
             </div> 
        
-         <div class="icon-bar col-lg-6" style="float:right">        
+         <div class="icon-bar col-lg-6 col-md-6 col-sm-6" style="float:right">        
             <a href="http://www.facebook.com/archyakhilesh"><i class="fa fa-facebook-square" style="font-size:32px;color:cornflowerblue"></i></a>
             <a href="http://github.com/archyakhilesh"><i class="fa fa-git-square" style="font-size:32px;color:cornflowerblue"></i></a>
             <a href="http://www.plus.google.com/akhilesh5045"><i class="fa fa-google-plus-square" style="font-size:32px;color:cornflowerblue"></i></a>
