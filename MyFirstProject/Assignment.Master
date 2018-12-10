@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Assignment.master.cs" Inherits="MyFirstProject.Assignment" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>My Website</title>
+    <link rel="stylesheet" href="MyStyle.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="container-fluid">
+         
+            <div class="header  row">
+                <div class="col-lg-2" style="text-align:left">
+                    <span id="headerSpan" style="font-size:45px;font-family:fantasy;color:cornflowerblue;padding-left:10px">Akhilesh</span><br />
+                    <span style="font-size:20px;color:darkred;font-family:fantasy;padding-left:10px">Software Developer</span>
+                </div>
+                <div class="col-lg-9"><span></span></div>
+                <div class="col-lg-1" style="float:right">
+                    <a href="https://www.talentquest.com/"><asp:Image ID="Image1" src="image/tq.png" runat="server" Height="100px"/></a>                 
+                </div>
+           </div>
+            <div class="nav" style="font-size:22px; padding:5px;margin-bottom:10px; background-color: #ccc">
+                <asp:Menu ID="navigationMenu" runat="server" DynamicHorizontalOffset="2" orientation="Horizontal" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#B5C7DE" />
+                    <DynamicSelectedStyle BackColor="#507CD1" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="Gallery" Value="Gallery" NavigateUrl="~/user.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/blog.aspx" Text="Blog" Value="Blog"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="AboutUs" Value="AboutUs"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/assignment.aspx" Text="Assignment" Value="Assignment"></asp:MenuItem>
+                        <asp:MenuItem Text="User" Value="Login" NavigateUrl="~/user.aspx">
+                            <asp:MenuItem NavigateUrl="~/signUp.aspx" Text="Sign Up" Value="Sign Up"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#507CD1" />
+                </asp:Menu>
+            </div>
+       
+            <div class="banner">
+                <asp:Image ID="imgBanner" runat="server" src="image/banner1.png" Height="400px" Width="100%" />
+            </div>
+            <div>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="1em" PathSeparator=" > ">
+                    <CurrentNodeStyle ForeColor="#333333" />
+                    <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                </asp:SiteMapPath>
+
+            </div>
+        <div>
+        <h1 style="text-align:center;border-bottom:2px solid;border-top:2px solid;padding:5px">Blog by Akhilesh</h1>
+         </div>
+        <div class="row">
+        <div class="col-lg-3">
+            <asp:TreeView ID="TreeView1" runat="server" ImageSet="WindowsHelp">
+                <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
+                <Nodes>
+                    <asp:TreeNode NavigateUrl="~/blog.aspx" Text="Blog" Value="New Node">
+                        <asp:TreeNode NavigateUrl="~/Assignments.aspx" Text="Assignment" Value="Assignment">
+                            <asp:TreeNode NavigateUrl="~/DataList.aspx" Text="Data List" Value="Data List"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/DetailsView.aspx" Text="Details View" Value="Details View"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/FormView.aspx" Text="Form View" Value="Form View"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/GridView.aspx" Text="Grid View" Value="Grid View"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/ListView.aspx" Text="List View" Value="List View"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Technologies" Value="Tech Blog">
+                            <asp:TreeNode Text="Java" Value="Java"></asp:TreeNode>
+                            <asp:TreeNode Text="Asp.Net" Value="Asp.Net"></asp:TreeNode>
+                            <asp:TreeNode Text="Python" Value="Python"></asp:TreeNode>
+                            <asp:TreeNode Text="Angular" Value="Angular"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Entertainment" Value="Entertainment">
+                            <asp:TreeNode Text="Jokes" Value="Jokes"></asp:TreeNode>
+                            <asp:TreeNode Text="Stories" Value="Stories"></asp:TreeNode>
+                            <asp:TreeNode Text="Poems" Value="Poems"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="My Thoughts" Value="My Thoughts"></asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>
+                <NodeStyle Font-Names="Tahoma" Font-Size="18px" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="1px" />
+                <ParentNodeStyle Font-Bold="False" />
+                <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px" VerticalPadding="0px" />
+            </asp:TreeView>
+        </div>
+        <div class="col-lg-9">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+         <div class="row panel-footer">
+            <div class="footerDiv col-lg-6">
+                <span class="footerSpan">Design and developed by Akhilesh Kumar</span><br />
+                <span class="footerSpan">All Right Reserved</span>
+            </div> 
+       
+         <div class="icon-bar col-lg-6" style="float:right">        
+            <a href="facebook.com/archyakhilesh"><i class="fa fa-facebook-square" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="github.com/archyakhilesh"><i class="fa fa-git-square" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="plus.google.com/akhilesh5045"><i class="fa fa-google-plus-square" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="instagram.com/archyakhilesh"><i class="fa fa-instagram" style="font-size:32px;color:cornflowerblue"></i></a>                
+            <a href="linkedin.com/in/archyakhilesh"><i class="fa fa-linkedin-square" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="skype.com/archyakhilesh"><i class="fa fa-skype" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="twitter.com/archyakhilesh"><i class="fa fa-twitter-square" style="font-size:32px;color:cornflowerblue"></i></a>
+            <a href="youtube.com/akhilesh5045"><i class="fa fa-youtube" style="font-size:32px;color:cornflowerblue"></i></a>                                           
+        </div>
+      </div>
+    </form>
+</body>
+</html>

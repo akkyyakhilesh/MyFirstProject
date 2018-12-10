@@ -1,0 +1,41 @@
+﻿body {
+
+}
+h1 {
+    text-align:center;
+    padding:5px;
+    border-bottom:2px solid;
+    border-top:2px solid;
+
+}
+#headerSpan{
+    font-size:20px;
+    font-family:fantasy;
+    padding:15px;
+    color:cornflowerblue;
+}
+.footerSpan {
+    font-size:16px !important;
+    padding:5px;
+    color:cornflowerblue !important;
+    text-align:left!important;
+}
+.footerDiv {
+    display:inline-block !important;
+
+}
+.panel-footer {
+    text-align: left !important;
+}
+.fa {
+    padding-right:10px;
+    float:right;
+
+}
+
+.galleryMainContent {
+    padding: 0px;
+    border: 2px solid;
+}
+
+
