@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="loginDiv row" style="text-align:center"">
-       <div class="col-lg-4"></div>
+       <div class="col-lg-5"></div>
         <div class="col-lg-4">
            <table style="border-collapse:separate; width:90%;font-size:18px; border-spacing: 0 1em;">
               <tr>
@@ -55,6 +55,6 @@
               
            </table>
         </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
    </div>
 </asp:Content>

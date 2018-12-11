@@ -39,11 +39,6 @@ namespace MyFirstProject
             
         }
 
-        protected void GridViewData_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-           
-        }
       
 
         
@@ -64,19 +59,30 @@ namespace MyFirstProject
 
         protected void GridViewData_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            
             DataTable dt = (DataTable)GridViewData.DataSource;
-            dt.Rows[e.RowIndex].AcceptChanges();
-
-            GridViewData.DataSource = dt;
+            GridViewRow row = GridViewData.Rows[e.RowIndex];
+            dt.Rows[row.DataItemIndex]["id"] = ((TextBox)(row.Cells[1].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Name"] = ((TextBox)(row.Cells[2].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Address"] = ((TextBox)(row.Cells[3].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["Email"] = ((TextBox)(row.Cells[4].Controls[0])).Text;
+            GridViewData.EditIndex = -1;
+       
             GridViewData.DataBind();
+            
         }
 
         protected void GridViewData_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-            DataTable dt = (DataTable)GridViewData.DataSource;
-            dt.Rows[e.RowIndex].EndEdit();
-            GridViewData.DataSource = dt;
+           // DataTable dt = (DataTable)GridViewData.DataSource;
+            GridViewData.EditIndex = -1;
+           // GridViewData.DataSource = dt;
             GridViewData.DataBind();
+        }
+
+        protected void GridViewData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

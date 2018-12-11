@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <div class="col-lg-4"></div>
+        <div class="col-lg-5"></div>
        <div class="col-lg-5" style="margin-top:15px;font-size:18px">
            <table style="border-collapse:separate;    border-spacing: 0 0.8em;">
                <tr>
@@ -27,7 +27,7 @@
                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                    </td>
                    <td class="auto-style3">            
-                       <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="Name is Required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                       <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="Name is Required!" ForeColor="Red">*</asp:RequiredFieldValidator>
                    </td>
                </tr>
                <tr>
@@ -39,7 +39,7 @@
                    </td>
                    <td class="auto-style3">
 <%--                       <asp:RequiredFieldValidator ID="rvfEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is Required!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                       <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ValidationExpression="^(?=.*?[a-z])(?=.*?[#?@.]).{8,}$" ErrorMessage="Invalid Email Format!" ForeColor="Red"></asp:RegularExpressionValidator>
+                       <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^(?=.*?[a-z])(?=.*?[#?@.]).{8,}$" ErrorMessage="Invalid Email Format!" ForeColor="Red"></asp:RegularExpressionValidator>
                    </td>
                </tr>
                <tr>
@@ -101,13 +101,21 @@
                        
                    </td>
                    <td>
-                       <asp:Button ID="btnSubmit" runat="server" OnClick="displayData" Text="Submit" />
-                       <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                       <asp:Button ID="btnSubmit" runat="server" OnClick="displayData" Text="Submit" BackColor="#009900" ForeColor="White" />
+                       <asp:Button ID="btnCancel" runat="server" Text="Cancel" BackColor="Red" ForeColor="White" />
                    </td>
+               </tr>
+
+               <tr>
+                   <td style="text-align:right">
+                       
+                       &nbsp;</td>
+                   <td>
+                       &nbsp;</td>
                </tr>
 
            </table>
        </div>
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
    </div>
 </asp:Content>

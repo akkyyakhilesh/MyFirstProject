@@ -20,9 +20,14 @@ namespace MyFirstProject
 
             table.Rows.Add("Ritvick", "8594668945", "rsingh@talentquest.com", "1994-07-15");
             table.Rows.Add("Manisha", "7036458549", "mshukla@talentquest.com", "1996-04-21");
-            table.Rows.Add("Ritvick", "7564668945", "dpodder@talentquest.com", "1995-09-02");
+            table.Rows.Add("Dip", "7564668945", "dpodder@talentquest.com", "1995-09-02");
             detailsViewTable.DataSource = table;
             detailsViewTable.DataBind();
+        }
+
+        protected void detailsViewTable_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+
         }
     }
 }
