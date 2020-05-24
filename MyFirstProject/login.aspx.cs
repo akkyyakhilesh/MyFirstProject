@@ -87,6 +87,7 @@ namespace MyFirstProject
 
         }
 
+        //cancel button click
         protected void btnCancelClick(object sender, EventArgs e)
         {
             txtPassword.Text = string.Empty;
