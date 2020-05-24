@@ -11,6 +11,7 @@ namespace MyFirstProject
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["status"] = 0;
         }
     }
 }

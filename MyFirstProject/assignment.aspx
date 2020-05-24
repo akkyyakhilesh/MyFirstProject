@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        .col-lg-2 {
+        .col-lg-2 .col-md-2 {
            width:20%;
            text-align:center;
         }
@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
         <h1>Assignment Page</h1>
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <h3>Example of DataList</h3>
                 <asp:Button ID="btnDataList" runat="server" Text="Click to View" OnClick="showDataList" />
 
@@ -33,7 +33,7 @@
                 </asp:DataList>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <h3>Example of DetailsView</h3>
                 <asp:Button ID="btnDetailsView" runat="server" Text="Click to View" OnClick="showDetailsView"/>
 
@@ -46,7 +46,7 @@
                 </asp:DetailsView>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <h3>Example of FormView</h3>
                 <asp:Button ID="btnFormView" runat="server" Text="Click to View" OnClick="showFormView" />
 
@@ -59,7 +59,7 @@
                 </asp:FormView>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <h3>Example of GridView</h3>
                 <asp:Button ID="btnGridView" runat="server" Text="Click to View" OnClick="showGridView" />
 
@@ -75,7 +75,7 @@
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <h3>Example of ListView</h3>
                 <asp:Button ID="btnListView" runat="server" Text="Click to View" OnClick="showListView" />
 

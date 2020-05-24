@@ -7,7 +7,7 @@
         <h1 style="text-align:center;border-bottom:2px solid;border-top:2px solid;padding:5px">Blog by Akhilesh</h1>
     </div>
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3">
             <asp:TreeView ID="TreeView1" runat="server" ImageSet="WindowsHelp">
                 <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
                 <Nodes>
@@ -38,7 +38,7 @@
                 <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 col-md-9">
             <h2>Blog Updates will be posted here:</h2>
         </div>
     </div>

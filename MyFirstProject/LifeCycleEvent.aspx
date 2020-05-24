@@ -16,7 +16,7 @@
             <h1>ASP.Net Basic Web Page</h1>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <asp:Label ID="lblLoad" runat="server" Font-Bold="true"></asp:Label><br />
                 <asp:Label ID="lblPreInit" runat="server" Font-Bold="true"></asp:Label><br />            
                 <asp:Label ID="lblInit" runat="server" Font-Bold="true"></asp:Label><br />
@@ -32,7 +32,7 @@
                 <asp:Label ID="lblCheckBox" runat="server" Text="Click on this CheckBox to Reload page !" Font-Bold="true"><br /></asp:Label>
                 <asp:LinkButton ID="LinkButton1" runat="server" href="index.aspx" Class="linkButton">Go to Home Page</asp:LinkButton>
           </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <h1>Data of the form page by using Query String</h1>
                 <asp:Label ID="lblNameData" runat="server"></asp:Label>
             </div>

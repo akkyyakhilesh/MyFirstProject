@@ -9,6 +9,7 @@
         <siteMapNode url="FormView.aspx" title="Form View"  description="" />
         <siteMapNode url="GridView.aspx" title="Grid View"  description="" />
         <siteMapNode url="ListView.aspx" title="List View"  description="" />
+        <siteMapNode url="Calculator.aspx" title="Calculator"  description="" />
     </siteMapNode>
    </siteMapNode>
   <siteMapNode url="AboutUs.aspx" title="AboutUs"  description="" />

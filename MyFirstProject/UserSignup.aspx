@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" MaintainScrollPositionOnPostback="true" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="MyFirstProject.signUp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" AutoEventWireup="true" UnobtrusiveValidationMode="None" CodeBehind="UserSignup.aspx.cs" Inherits="MyFirstProject.UserSignup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
        
@@ -49,14 +49,13 @@
                </tr>
                <tr>
                    <td style="text-align:right">
-                       <asp:Label ID="lblEmail" runat="server" Text="E-Mail : "></asp:Label>
+                       <asp:Label ID="lblGender" runat="server" Text="Gender : "></asp:Label>
                    </td>
                    <td>
-                        <asp:TextBox ID="txtEmail" TextMode="Email" runat="server"></asp:TextBox>
-                   </td>
-                   <td class="auto-style3">
-<%--                       <asp:RequiredFieldValidator ID="rvfEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is Required!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                       <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^(?=.*?[a-z])(?=.*?[#?@.]).{8,}$" ErrorMessage="Invalid Email Format!" ForeColor="Red">*</asp:RegularExpressionValidator>
+                       <asp:RadioButtonList ID="rbGender" runat="server">
+                           <asp:ListItem>Male</asp:ListItem>
+                           <asp:ListItem>Female</asp:ListItem>
+                       </asp:RadioButtonList>
                    </td>
                </tr>
                <tr>
@@ -73,21 +72,45 @@
                </tr>
                <tr>
                    <td style="text-align:right">
-                       <asp:Label ID="lblGender" runat="server" Text="Gender : "></asp:Label>
+                       <asp:Label ID="lblEmail" runat="server" Text="E-Mail : "></asp:Label>
                    </td>
                    <td>
-                       <asp:RadioButtonList ID="rbGender" runat="server">
-                           <asp:ListItem>Male</asp:ListItem>
-                           <asp:ListItem>Female</asp:ListItem>
-                       </asp:RadioButtonList>
+                        <asp:TextBox ID="txtEmail" TextMode="Email" runat="server"></asp:TextBox>
+                   </td>
+                   <td class="auto-style3">
+<%--                       <asp:RequiredFieldValidator ID="rvfEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is Required!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                       <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^(?=.*?[a-z])(?=.*?[#?@.]).{8,}$" ErrorMessage="Invalid Email Format!" ForeColor="Red">*</asp:RegularExpressionValidator>
                    </td>
                </tr>
                <tr>
                    <td style="text-align:right">
-                       <asp:Label ID="lblDOB" runat="server" Text="Date Of Birth : "></asp:Label>
+                       <asp:Label ID="lblCompany" runat="server" Text="Company:"></asp:Label>
+                   </td>
+                    <td>
+                        <asp:DropDownList ID="ddlCompany" runat="server" AppendDataBoundItems="true" DataSourceID="SqlDataSource1" DataTextField="CName" DataValueField="CID">
+                        <asp:ListItem Text="Select Company" Value="0"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AkhileshConnectionString %>" SelectCommand="SELECT [CID], [CName] FROM [Company] WHERE ([CName] IS NOT NULL)"></asp:SqlDataSource>
+                   </td>
+               </tr>
+               <tr>
+                   <td style="text-align:right">
+                       <asp:Label ID="lblLocation" runat="server" Text="Location:"></asp:Label>
+                   </td>
+                    <td>
+                       <asp:DropDownList ID="ddlLocation" runat="server" AppendDataBoundItems="true" DataSourceID="SqlDataSource2" DataTextField="Location" DataValueField="Location">
+                           <asp:ListItem Text="Select Location" Value="Location"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AkhileshConnectionString %>" SelectCommand="SELECT [Location] FROM [Company] WHERE ([CName] IS NOT NULL)"></asp:SqlDataSource>
+                   </td>
+               </tr>
+               
+               <tr>
+                   <td style="text-align:right">
+                       <asp:Label ID="lblDOJ" runat="server" Text="Date Of Join : "></asp:Label>
                    </td>
                    <td>
-                       <asp:TextBox ID="txtDOB" TextMode="Date" runat="server"></asp:TextBox>
+                       <asp:TextBox ID="txtDOJ" TextMode="Date" runat="server"></asp:TextBox>
                    </td>
                </tr>
                <tr>
@@ -120,7 +143,7 @@
                        
                    </td>
                    <td>
-                       <asp:Button ID="btnSubmit" runat="server" OnClick="displayData" Text="Submit" BackColor="#009900" ForeColor="White" />
+                       <asp:Button ID="btnSubmit" runat="server" OnClick="insertData" Text="Submit" BackColor="#009900" ForeColor="White" />
                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" BackColor="Red" ForeColor="White" />
                    </td>
                </tr>

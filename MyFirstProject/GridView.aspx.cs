@@ -33,6 +33,8 @@ namespace MyFirstProject
             tables.Rows.Add("1", "Akhilesh", "BTM", "akumar2@talentquest.com");
             tables.Rows.Add("2", "Ritvick", "HSR", "rsingh@talentquest.com");
             tables.Rows.Add("3", "Dip", "BOM", "dpodder@talentqquest.com");
+            tables.Rows.Add("4", "Manisha", "BTM2", "mshukla@talentqquest.com");
+            tables.Rows.Add("5", "Hrishikesh", "ELC", "hhegde@talentqquest.com");
 
             GridViewData.DataSource = tables;
             GridViewData.DataBind();
@@ -62,21 +64,18 @@ namespace MyFirstProject
             
             DataTable dt = (DataTable)GridViewData.DataSource;
             GridViewRow row = GridViewData.Rows[e.RowIndex];
-            dt.Rows[row.DataItemIndex]["id"] = ((TextBox)(row.Cells[1].Controls[0])).Text;
+            dt.Rows[row.DataItemIndex]["id"] = ((TextBox)(row.Cells[1]).Controls[0]).Text;
             dt.Rows[row.DataItemIndex]["Name"] = ((TextBox)(row.Cells[2].Controls[0])).Text;
             dt.Rows[row.DataItemIndex]["Address"] = ((TextBox)(row.Cells[3].Controls[0])).Text;
             dt.Rows[row.DataItemIndex]["Email"] = ((TextBox)(row.Cells[4].Controls[0])).Text;
-            GridViewData.EditIndex = -1;
-       
+            GridViewData.EditIndex = -1;     
             GridViewData.DataBind();
             
         }
 
         protected void GridViewData_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-           // DataTable dt = (DataTable)GridViewData.DataSource;
             GridViewData.EditIndex = -1;
-           // GridViewData.DataSource = dt;
             GridViewData.DataBind();
         }
 

@@ -10,7 +10,7 @@
 namespace MyFirstProject {
     
     
-    public partial class login {
+    public partial class AdminLogin {
         
         /// <summary>
         /// lblError control.
@@ -83,15 +83,6 @@ namespace MyFirstProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPassword;
-        
-        /// <summary>
-        /// chkAdmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAdmin;
         
         /// <summary>
         /// btnSubmit control.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" UnobtrusiveValidationMode="None" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="MyFirstProject.login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MyMaster.Master" AutoEventWireup="true" UnobtrusiveValidationMode="None" CodeBehind="AdminLogin.aspx.cs" Inherits="MyFirstProject.AdminLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
     
@@ -17,12 +17,12 @@
         <div class="col-lg-3 col-md-3">
            <table style="border-collapse:separate; width:90%;font-size:18px; border-spacing: 0 1em;">
               <tr>
-                  <td colspan="2"> <asp:Label ID="lblError" runat="server" ForeColor="Red" Font-Size="Large"></asp:Label></td>
+                  <td colspan="2"> <asp:label id="lblError" runat="server" forecolor="Red" font-size="Large"></asp:label></td>
               </tr>
                
                <tr>
                    <th colspan="2" style="background-color:dodgerblue;color:white;padding:5px">
-                       <asp:Label ID="lblLogin" runat="server" Text="Login"></asp:Label>
+                       <asp:Label ID="lblLogin" runat="server" Text="Admin Login"></asp:Label>
                    </th>
                </tr>
                <tr>
@@ -50,7 +50,7 @@
                </tr>
                <tr>
                    <td class="auto-style1">
-                       <asp:CheckBox ID="chkAdmin" runat="server" Text="Login as Admin" />
+                       
                    </td>
                    <td class="auto-style1">
                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmitClick" BackColor="#009900" ForeColor="White" />

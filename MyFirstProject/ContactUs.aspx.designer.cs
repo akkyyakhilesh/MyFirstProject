@@ -10,15 +10,15 @@
 namespace MyFirstProject {
     
     
-    public partial class DataList {
+    public partial class ContactUs {
         
         /// <summary>
-        /// dataListData control.
+        /// ContactUserControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dataListData;
+        protected global::MyFirstProject.ContactUserControl ContactUserControl;
     }
 }

@@ -4,12 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <h3>Example of DetailsView</h3>
         <div>
-        <asp:DetailsView ID="detailsViewTable" runat="server" AllowPaging="true" OnPageIndexChanging="detailsViewTable_PageIndexChanging" Height="147px" Width="100%" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
-            <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-            <FooterStyle BackColor="#CCCCCC" />
-            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-            <RowStyle BackColor="White" />
+        <asp:DetailsView ID="detailsViewTable" runat="server" AllowPaging="True" OnPageIndexChanging="detailsViewTable_PageIndexChanging" Height="200px" Width="50%" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+            <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="White" ForeColor="#333333" />
+            <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" BorderWidth="1px" Font-Size="Large" Font-Underline="True" Height="20px" Width="10px" Wrap="True" />
+            <RowStyle BackColor="White" ForeColor="#333333" />
         </asp:DetailsView>
     </div>
 </asp:Content>

@@ -11,7 +11,7 @@ namespace MyFirstProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "startTime()", true);
         }
 
         protected void navigationMenu_MenuItemClick(object sender, MenuEventArgs e)

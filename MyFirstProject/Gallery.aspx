@@ -16,7 +16,7 @@
     <div class="gallery-header row">
         <h1>Grid View Example</h1>
    
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3 col-md-3"></div>
     <div class="galleryMainContent col-lg-6">
         <asp:GridView ID="grdViewTable" runat="server" CellPadding="4" CssClass="auto-style1" ForeColor="#333333" GridLines="None" Height="308px" Width="100%">
             <AlternatingRowStyle BackColor="White" />
@@ -32,6 +32,6 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
       </div>  
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3 col-md-3"></div>
     </div>
 </asp:Content>
