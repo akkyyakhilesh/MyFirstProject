@@ -18,7 +18,7 @@ namespace MyFirstProject
 
         }
 
-        //Login 
+        //Login on bullton click
         protected void btnSubmitClick(object sender, EventArgs e)
         {
             try
